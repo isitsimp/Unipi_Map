@@ -1,0 +1,99 @@
+[
+  {
+    "lat": 37.941658,
+    "lng": 23.652946,
+    "id": "01",
+    "title": "Κεντρικό Κτήριο ΚΕΚΤ",
+    "street": "Καραολή και Δημητρίου 80, Πειραιάς 185 34",
+    "image": "/buildingsPNGS/ΚΕΚΤ.png",
+    "info": "τηλ. 2104142000 e-mail: info@unipi.gr",
+    "amea": true,
+    "googlemaps" : "https://www.google.com/maps/place/University+of+Piraeus/@37.9365941,23.6496123,2288m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbe5bb8515a1:0x3e0dce8e58812705!8m2!3d37.9416013!4d23.6529793!16zL20vMGQwOTA0?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview" : "https://www.google.com/maps/place/University+of+Piraeus/@37.941927,23.6525386,3a,75y,93.72h,89.79t/data=!3m7!1e1!3m5!1s4CoTu_B36rLPj-Ggtu_XKw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.21059396362811356%26panoid%3D4CoTu_B36rLPj-Ggtu_XKw%26yaw%3D93.71662623918985!7i16384!8i8192!4m6!3m5!1s0x14a1bbe5bb8515a1:0x3e0dce8e58812705!8m2!3d37.9416013!4d23.6529793!16zL20vMGQwOTA0?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "lat": 37.94130,
+    "lng": 23.65222,
+    "id": "02",
+    "title": "Εργαστήρια και Γραφεία Καθηγητών",
+    "street": "Δεληγιώργη 107",
+    "image": "/buildingsPNGS/deligiwrgi.png",
+    "info": "",
+    "amea": false,
+    "googlemaps": "https://www.google.com/maps/place/Κέντρο+Μάθησης/@37.9413149,23.6522012,21z/data=!4m6!3m5!1s0x14a1bb0047b64d3f:0x8f2951214ddb7f7b!8m2!3d37.9412551!4d23.6523572!16s%2Fg%2F11lp34ssss",
+    "streetview": "https://www.google.com/maps/dir//37.9413482,23.6521982/@37.9413149,23.6522012,21z/data=!4m2!4m1!3e3"
+  },
+  {
+    "lat": 37.94125,
+    "lng": 23.65237,
+    "id": "03",
+    "title": "Φοιτητικό Εστιατόριο",
+    "street": "Τσαμαδού 78",
+    "image": "/buildingsPNGS/tsamadu.png",
+    "info": "Πρωινό: 08:00-09:00 Μεσημεριανό: 12:30-17:00 Βραδινό: 17:00-19:00",
+    "amea": false,
+    "icon":"lesxh",
+    "googlemaps": "https://www.google.com/maps/place/Student+Restaurant+University+of+Piraeus/@37.9413149,23.6522012,21z/data=!4m6!3m5!1s0x14a1bb26d80effef:0xf0860a3b96084a15!8m2!3d37.941281!4d23.6523352!16s%2Fg%2F11h8j43xy7",
+    "streetview": "https://www.google.com/maps/dir//Student+Restaurant+University+of+Piraeus,+Tsamadou+78,+Pireas+185+34/@37.9413149,23.6522012,21z/data=!4m17!1m7!3m6!1s0x14a1bb26d80effef:0xf0860a3b96084a15"
+  },
+  {
+    "lat": 37.94619,
+    "lng": 23.65477,
+    "id": "04",
+    "title": "Κτήριο Γρ. Λαμπράκη ΓΛ",
+    "street": "Γρ. Λαμπράκη 21 & Διστόμου",
+    "image": "/buildingsPNGS/lampraki21.png",
+    "info": "",
+    "amea": false,
+    "googlemaps": "https://www.google.com/maps/place/Πανεπιστήμιο+Πειραιώς+-+κτήριο+Γρ.Λαμπράκη/@37.9460119,23.6547376,20.1z/data=!4m6!3m5!1s0x14a1bbef4985ac51:0xe0cea48f79791a52!8m2!3d37.9461909!4d23.6547744",
+    "streetview": "https://www.google.com/maps/dir//Πανεπιστήμιο+Πειραιώς+-+κτήριο+Γρ.Λαμπράκη,+Distomou+43,+Pireas+185+33/@37.9460119,23.6547376,20.1z/data=!4m17!1m7"
+  },
+  {
+    "lat": 37.94168,
+    "lng": 23.64985,
+    "id": "05",
+    "title": "Γραφεία Καθηγητών & Εργαστήρια Ψηφιακών Συστημάτων",
+    "street": "Ανδρούτσου 150",
+    "image": "/buildingsPNGS/androutsou.png",
+    "info": "",
+    "amea": false,
+    "googlemaps": "https://www.google.com/maps/place/Πανεπιστήμιο+Πειραιώς,+Κτήριο+Ανδρούτσου/@37.9417181,23.6472289,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbe324184151:0x14c08364671ce62!8m2!3d37.9417181!4d23.6498092",
+    "streetview": "https://www.google.com/maps/dir//Πανεπιστήμιο+Πειραιώς,+Κτήριο+Ανδρούτσου,+Odissea+Androutsou+150,+Pireas+185+32/@37.9417181,23.6472289,17z/data=!4m17!1m7"
+  },
+  {
+    "lat": 37.94171,
+    "lng": 23.65050,
+    "id": "06",
+    "title": "Γραφεία Καθηγητών",
+    "street": "Γρ. Λαμπράκη 126",
+    "image": "/buildingsPNGS/lampraki126.png",
+    "info": "",
+    "amea": false,
+    "googlemaps": "https://www.google.com/maps/place/Grigoriou+Lampraki+126,+Pireas+185+32/@37.9418067,23.6478331,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbef33a174cb:0xa2ed6812ed7c97b7!8m2!3d37.9418067!4d23.6504134",
+    "streetview": "https://www.google.com/maps/dir//Grigoriou+Lampraki+126,+Pireas+185+32/@37.9418067,23.6478331,17z/data=!4m18!1m8"
+  },
+  {
+    "lat": 37.94100,
+    "lng": 23.65221,
+    "id": "07",
+    "title": "Γραμματεία Ψηφιακών Συστημάτων",
+    "street": "Ζέας 80-82",
+    "image": "/buildingsPNGS/zeas.png",
+    "info": "2ος όροφος κάθε Δευτέρα-Τετάρτη-Παρασκευή 11:30–14:00 | e-mail: gramds@unipi.gr",
+    "amea": true,
+    "googlemaps": "https://www.google.com/maps/place/Zeas+80-82,+Pireas+185+34/@37.9410279,23.6496008,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbef132ffb03:0xd9c056f7ae04bcd7!8m2!3d37.9410279!4d23.6521811",
+    "streetview": "https://www.google.com/maps/dir//Zeas+80-82,+Pireas+185+34/@37.9410279,23.6496008,17z/data=!4m18!1m8"
+  },
+  {
+    "lat": 37.97060,
+    "lng": 23.63397,
+    "id": "08",
+    "title": "Θεμιστόκλειο Συγκρότημα",
+    "street": "Κυρα της Ρο 17, Νίκαια 18451",
+    "image": "/buildingsPNGS/nikaia.png",
+    "info": "Κέντρο εκπαιδευτικών και ερευνητικών δραστηριοτήτων",
+    "amea": true,
+    "googlemaps": "https://www.google.com/maps/place/University+of+Piraeus+Themistoclean+Campus/@37.9704131,23.6244842,16z/data=!4m6!3m5!1s0x14a1bb4bd49c5553:0xb149a23abe5747b!8m2!3d37.9704161!4d23.6340599",
+    "streetview": "https://www.google.com/maps/dir//University+of+Piraeus+Themistoclean+Campus,+Kira+Tis+Ro+17,+Nikea+184+51/@37.9704131,23.6244842,16z/data=!4m17!1m7"
+  }
+]

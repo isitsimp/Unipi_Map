@@ -1,0 +1,67 @@
+#menu{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-width: 350px;
+    height: 12%;
+    z-index: 1000;
+    background-color: #232D53;
+}
+/*Custom font*/
+@font-face{ 
+    font-family: Libel;
+    src: url('/fonts/Libel Suit Suit Rg.otf');
+}
+/*Menu*/
+header{
+    text-align: center;
+    background-color: #9A1D2E;
+    color: white;
+    font-family: "Libel", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    height: 24%;
+}
+#link-to-Unipi{
+  position: absolute;
+  top: 24px;
+  left: 100px;
+  color: #FFFF;
+  font-family: "Libel";
+  font-size: 25px;
+}
+#link-to-DS{
+  position: absolute;
+  top: 56px;
+  left: 100px;
+  color: #D2D2D2;
+  font-family: "Libel";
+  font-size: 18px;
+}
+a:hover { opacity:0.7; }
+a { text-decoration: none; }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+/*language Swap*/
+#lang {
+    position: absolute;
+    bottom: 22px;
+    right: 11px;
+    z-index: 1000;
+    padding: 5px 10px;
+    background-color: #232D53;
+    color: white;
+    border: none;
+    font-family: "Libel";
+    font-size: 20px;
+}
+
+
