@@ -4,9 +4,12 @@
     "lng": 23.652946,
     "id": "01",
     "title": "Κεντρικό Κτήριο ΚΕΚΤ",
+    "title_en": "Main Building",
     "street": "Καραολή και Δημητρίου 80, Πειραιάς 185 34",
+    "street_en": "Karaoli and Dimitriou street 80, Piraeus 185 34", 
     "image": "/buildingsPNGS/ΚΕΚΤ.png",
     "info": "τηλ. 2104142000 e-mail: info@unipi.gr",
+    "info_en": "phone: 2104142000 e-mail: info@unipi.gr",
     "amea": true,
     "googlemaps" : "https://www.google.com/maps/place/University+of+Piraeus/@37.9365941,23.6496123,2288m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbe5bb8515a1:0x3e0dce8e58812705!8m2!3d37.9416013!4d23.6529793!16zL20vMGQwOTA0?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D",
     "streetview" : "https://www.google.com/maps/place/University+of+Piraeus/@37.941927,23.6525386,3a,75y,93.72h,89.79t/data=!3m7!1e1!3m5!1s4CoTu_B36rLPj-Ggtu_XKw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.21059396362811356%26panoid%3D4CoTu_B36rLPj-Ggtu_XKw%26yaw%3D93.71662623918985!7i16384!8i8192!4m6!3m5!1s0x14a1bbe5bb8515a1:0x3e0dce8e58812705!8m2!3d37.9416013!4d23.6529793!16zL20vMGQwOTA0?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
