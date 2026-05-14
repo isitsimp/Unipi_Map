@@ -4,7 +4,9 @@
     "lng": 23.64773,
     "id": "01",
     "title": "Δημοτικό Θέατρο",
+    "title_en": "Dimotiko Theatro",
     "info": "Σταθμός Μετρό: Γραμμή 3",
+    "info_en": "Metro Station: Line 3",
     "icon": "metroB",
     "googlemaps": "https://www.google.com/maps/place/Dimotiko+Theatro/@37.9429352,23.6465006,18z/data=!4m6!3m5!1s0x14a1bbe8fead288b:0xd5c618fd6a0c0628!8m2!3d37.9429353!4d23.647582",
     "streetview": "https://www.google.com/maps/dir//Dimotiko+Theatro,+Pireas+185+32/@37.9429352,23.6465006,18z/data=!4m17!1m7"
@@ -47,7 +49,8 @@
     "info": "Σταθμός Προαστιακού",
     "icon": "proastiakos",
     "googlemaps": "https://www.google.com/maps/place/Πειραιάς/@37.9491116,23.6423798,20z/data=!4m6!3m5!1s0x14a1bbc1cad3d423:0x78fede80fd331092!8m2!3d37.9491115!4d23.6425196",
-    "streetview": "https://www.google.com/maps/dir//Πειραιάς,+Pireas+185+45/@37.9491116,23.6423798,20z/data=!4m17!1m7"
+    "streetview": "https://www.google.com/maps/dir//Πειραιάς,+Pireas+185+45/@37.9491116,23.6423798,20z/data=!4m17!1m7",
+    "arrivals": "https://ose.mpass.ltd/#/routesInfos/2?lang=el"
   },
   {
     "lat": 37.94794,
