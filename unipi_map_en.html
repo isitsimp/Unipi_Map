@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Map - Department of Digital Systems</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="unipi_map.css">
+        <link rel="icon" href="https://www.unipi.gr/wp-content/uploads/2023/11/cropped-favicon-32x32.png" sizes="32x32">
+        <!--Leaflet-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+        <style>
+            #map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+        </style>   
+    </head>
+    <body>
+        <!--MENU-->
+        <div id="menu">
+            <a href="https://www.ds.unipi.gr/en/home-en/" rel="home">
+                <img width="100px" height="100px" src="https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo.png" alt="Τμήμα Ψηφιακών Συστημάτων" decoding="async" srcset="https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo.png 180w, https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo-150x150.png 150w">
+            </a>
+            <header>University of Piraeus Map</header>
+            <a href="https://www.unipi.gr/en/home/" target="_blank" id="link-to-Unipi">University of Piraeus</a>
+            <a href="https://www.ds.unipi.gr/en/home-en/" rel="home" id="link-to-DS">Department of Digital Systems</a>
+        </div>
+        <!--MAP-->
+        <div id="map"></div>
+        <script src="unipi_map.js"></script>
+        <a id="lang" lang="gr" hreflang="gr" href="unipi_map.html"><img src="/images/el.png" alt="Ελληνικά"></a>      
+    </body>
+</html>
