@@ -40,7 +40,8 @@ header{
   font-size: 18px;
 }
 a:hover { opacity:0.7; }
-a { text-decoration: none; }
+a { text-decoration: none;
+color: inherit;}
 
 body {
     padding: 0;
@@ -64,5 +65,17 @@ html, body, #map {
     font-size: 20px;
     border-radius: 25px;
 }
-
+/*catalogue*/
+.dropdown{
+    position: absolute;
+    top: 150px;
+    left: 15px;
+    z-index: 1000;
+    font-family: "Libel";
+    font-size: 20px;
+    color: white;
+    background-color: #232D53;
+    width: 200px;
+    padding: 10px;
+}
 
