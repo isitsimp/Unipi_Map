@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     max-width: 350px;
-    height: 12%;
+    height: 108px;
     z-index: 1000;
     background-color: #232D53;
 }
@@ -53,15 +53,16 @@ html, body, #map {
 /*language Swap*/
 #lang {
     position: absolute;
-    bottom: 22px;
+    bottom: 25px;
     right: 11px;
     z-index: 1000;
-    padding: 5px 10px;
+    padding: 8px 10px;
     background-color: #232D53;
     color: white;
     border: none;
     font-family: "Libel";
     font-size: 20px;
+    border-radius: 25px;
 }
 
 
