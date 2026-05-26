@@ -39,6 +39,11 @@ const icons = {
     iconUrl: 'images/lesxh.png',
     iconSize: [40, 40]
   }),
+  
+  main: L.icon({
+    iconUrl: 'images/main-pin.png',
+    iconSize: [65, 65]
+  }),
 
   default: L.icon({
     iconUrl: 'images/marker-blue-icon.png',
@@ -52,6 +57,7 @@ let stopMarkers = [];
 
 let layers = {};
 
+
 let flag = "Greek"; // Default
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
@@ -62,19 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
     flag = "Greek";
   }
 
-  let isFirst = true;
+  const markerLookup = {};
+  
 /*Buildings*/
   fetch('buildings.json')
     .then(response => response.json())
     .then(data => {
       data.forEach(item => {
+        const id = item.id;
         const icon = icons[item.icon] || icons.default;
 
         let building;
         if (flag === "Greek") {
           building = `<b>${item.title}</b><br>${item.street}<br>`;
-        } else {
-          //English fields
+        } else { //English fields
           building = `<b>${item.title_en}</b><br>${item.street_en}<br>`;
         }
         let popupContent = building;
@@ -86,34 +93,28 @@ document.addEventListener('DOMContentLoaded', () => {
         let information;
         if (flag === "Greek") {
           information = `${item.info}<br>`;
-        } else {
-          //English fields
+        } else { //English fields
           information = `${item.info_en}<br>`;
         }
         popupContent += information;
        
         if (item.amea === true) {
-          popupContent += `<img src='/images/wheelchair.png' alt="Προσβάσιμο για αναπηρικές καρέκλες" style='width:24px; height:24px; vertical-align:right;'><br>`;
-        } else {
-          popupContent += `<img src='/images/no-wheelchair.png' alt="Μη-προσβάσιμο για αναπηρικές καρέκλες" style='width:24px; height:24px; vertical-align:right;'><br>`;
+          popupContent += `<img src='/images/wheelchair.png' alt="Προσβάσιμο για αναπηρικές καρέκλες" style='width:27px; height:27px; position:relative; bottom:-5px;'><br>`;
+        } else { //English fields
+          popupContent += `<img src='/images/no-wheelchair.png' alt="Μη-προσβάσιμο για αναπηρικές καρέκλες" style='width:27px; height:27px; position:relative; bottom:-5px;'><br>`;
         }
 
-        let locations;
-        if (flag === "Greek") {
-          locations = `<a href="${item.googlemaps}" target="_blank">Προβολή στο Google Maps</a> | <a href="${item.streetview}">StreetView</a>`;
-        } else {
-          //English fields
-          locations = `<a href="${item.googlemaps}" target="_blank">Show in Google Maps</a> | <a href="${item.streetview}">StreetView</a>`;
-        }
-        popupContent += locations;
-
+        popupContent += `<a href="${item.googlemaps}" target="_blank">Google Maps</a><img src='/images/magnifying-glass-location-solid.png' alt="Googlemaps" style='width:27px; height:27px; position:relative; bottom:-5px;'> | <a href="${item.streetview}" target="_blank">StreetView</a><img src='/images/streetview-yellow.png' alt="Streetview" style='width:27px; height:27px; position:relative; bottom:-5px;'>`;
+        
         let marker = L.marker([item.lat, item.lng], { icon })
           .bindPopup(popupContent);
         
-        if (isFirst) {
-          console.log("ENTERED");
+        item.marker = marker;
+        markerLookup[id] = marker;
+        
+        if (id === "01") { //TRY-AGAIN
+          console.log("Opening popup");
           marker.openPopup();
-          isFirst = false;
         }
         
         buildingMarkers.push(marker);
@@ -122,9 +123,34 @@ document.addEventListener('DOMContentLoaded', () => {
       layers.buildings = L.layerGroup(buildingMarkers);
       map.addLayer(layers.buildings);
       updateControl();
+    
+    
+    const drpdownlinks = document.querySelectorAll('.dropdown a');
+    
+    drpdownlinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); ///TRY_OUT
+        
+        const targetID = this.getAttribute('data-id');
+        
+        const targetMarker = markerLookup[targetID];
+        
+        if (targetMarker){
+          map.flyTo(targetMarker.getLatLng(), 18, {
+            duration: 1.5
+          });
+          targetMarker.openPopup();
+          
+          const details = this.closest('details');
+          if (details) details.removeAttribute('open');
+        }else{
+          console.error('Marker not found');
+        }
+      });    
+    });
     })
     .catch(error => console.error('Error loading buildings:', error));
-                         
+ 
 /*Stops*/
   fetch('stops.json')
     .then(response => response.json())
@@ -134,10 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let mmm;
           if (flag === "Greek") {
-            mmm = `<b>${item.title}</b><br>${item.info}<br><a href="${item.googlemaps}" target="_blank">Προβολή στο Google Maps</a> | <a href=${item.streetview}>StreetView</a>`;
+            mmm = `<b>${item.title}</b><br>${item.info}<br><a href="${item.googlemaps}" target="_blank">Προβολή στο Google Maps</a> | <a href=${item.streetview} target="_blank">StreetView</a>`;
           } else {
             //English fields
-            mmm = `<b>${item.title_en}</b><br>${item.info_en}<br><a href="${item.googlemaps}" target="_blank">Show in Google Maps</a> | <a href=${item.streetview}>StreetView</a>`;
+            mmm = `<b>${item.title_en}</b><br>${item.info_en}<br><a href="${item.googlemaps}" target="_blank">Show in Google Maps</a> | <a href=${item.streetview} target="_blank">StreetView</a>`;
           }
           let popupContent = mmm;
 
