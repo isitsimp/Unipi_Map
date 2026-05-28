@@ -112,11 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
         item.marker = marker;
         markerLookup[id] = marker;
         
-        if (id === "01") { //TRY-AGAIN
-          console.log("Opening popup");
-          marker.openPopup();
+        /*video*/
+        const video = document.querySelector("video");
+        const mapContainer = document.querySelector(".leaflet-map-pane");
+        if (id === "01") { //unipi main building
+          marker.on('mouseover', function (e) {//show vid
+            video.style.visibility = 'visible';
+          });
+          marker.on('mouseout', function (e) {//hide vid
+            video.style.visibility = 'hidden';
+          });
+          
+          mapContainer.addEventListener('mousemove', function (e) {
+            if (video.style.visibility === 'visible') {
+              const offsetX = 0; 
+              const offsetY = 200;
+              video.style.left = (e.clientX + offsetX) + 'px';
+              video.style.top = (e.clientY + offsetY) + 'px';
+            }
+          });
+          
         }
-        
+
         buildingMarkers.push(marker);
       });
 
