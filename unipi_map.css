@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     max-width: 350px;
-    height: 108px;
+    height: 106px;
     z-index: 1000;
     background-color: #232D53;
 }
@@ -19,9 +19,8 @@ header{
     background-color: #9A1D2E;
     color: white;
     font-family: "Libel", sans-serif;
-    font-weight: 400;
     font-size: large;
-    height: 24%;
+    height: 30px;
 }
 #link-to-Unipi{
   position: absolute;
