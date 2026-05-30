@@ -6,38 +6,13 @@
     max-width: 350px;
     height: 106px;
     z-index: 1000;
-    background-color: #232D53;
 }
 /*Custom font*/
 @font-face{ 
     font-family: Libel;
     src: url('/fonts/Libel Suit Suit Rg.otf');
 }
-/*Menu*/
-header{
-    text-align: center;
-    background-color: #9A1D2E;
-    color: white;
-    font-family: "Libel", sans-serif;
-    font-size: large;
-    height: 30px;
-}
-#link-to-Unipi{
-  position: absolute;
-  top: 24px;
-  left: 100px;
-  color: #FFFF;
-  font-family: "Libel";
-  font-size: 25px;
-}
-#link-to-DS{
-  position: absolute;
-  top: 56px;
-  left: 100px;
-  color: #D2D2D2;
-  font-family: "Libel";
-  font-size: 18px;
-}
+
 a:hover { opacity:0.7; }
 a { text-decoration: none;
 color: inherit;}
@@ -67,7 +42,7 @@ html, body, #map {
 /*catalogue*/
 .dropdown{
     position: absolute;
-    top: 150px;
+    top: 115px;
     left: 15px;
     z-index: 1000;
     font-family: "Libel";
