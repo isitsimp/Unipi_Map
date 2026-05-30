@@ -14,40 +14,37 @@ const icons = {
     iconUrl: 'images/busblue.png',
     iconSize: [40, 40]
   }),
-
   metroB: L.icon({
     iconUrl: 'images/metro-blue.png',
     iconSize: [40, 40]
   }),
-
   metroG: L.icon({
     iconUrl: 'images/metro-green.png',
     iconSize: [40, 40]
   }),
-
   tram: L.icon({
     iconUrl: 'images/tram-orange.png',
     iconSize: [40, 40]
   }),
-
   proastiakos: L.icon({
     iconUrl: 'images/proastiakos-r.png',
     iconSize: [40, 40]
   }),
-
   lesxh: L.icon({
     iconUrl: 'images/lesxh.png',
     iconSize: [40, 40]
   }),
-  
   main: L.icon({
     iconUrl: 'images/main-pin.png',
     iconSize: [65, 65]
   }),
-
   default: L.icon({
-    iconUrl: 'images/marker-blue-icon.png',
-    iconSize: [25, 41]
+    iconUrl: 'images/location-dot-solid.png',
+    iconSize: [45, 45]
+  }),
+  groupedstopsIcon: L.icon({
+    iconUrl: 'images/busgroup.png',
+    iconSize: [40, 40]
   })
 };
 
@@ -56,7 +53,6 @@ let buildingMarkers = [];
 let stopMarkers = [];
 
 let layers = {};
-
 
 let flag = "Greek"; // Default
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const markerLookup = {};
   
-/*Buildings*/
+  /*Buildings*/
   fetch('buildings.json')
     .then(response => response.json())
     .then(data => {
@@ -86,6 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         let popupContent = building;
 
+        /*if(item.id === "01"){
+          popupContent += `<video max-width="400" height="200" autoplay loop muted>
+          <source src="/google_earth/unipiorbit.mp4" type="video/mp4">Unipi Orbit</video>`;
+        }else*/
         if (item.image) {
           popupContent += `<img src='${item.image}' style='width:100%; height:auto;'><br>`;
         }
@@ -109,6 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let marker = L.marker([item.lat, item.lng], { icon })
           .bindPopup(popupContent);
         
+        marker.on('mouseover', function (e) {
+            this.openPopup();
+        });
         item.marker = marker;
         markerLookup[id] = marker;
         
@@ -116,13 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const video = document.querySelector("video");
         const mapContainer = document.querySelector(".leaflet-map-pane");
         if (id === "01") { //unipi main building
+          /*
           marker.on('mouseover', function (e) {//show vid
             video.style.visibility = 'visible';
           });
           marker.on('mouseout', function (e) {//hide vid
             video.style.visibility = 'hidden';
           });
-          
           mapContainer.addEventListener('mousemove', function (e) {
             if (video.style.visibility === 'visible') {
               const offsetX = 0; 
@@ -130,17 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
               video.style.left = (e.clientX + offsetX) + 'px';
               video.style.top = (e.clientY + offsetY) + 'px';
             }
-          });
-          
+          });*/
         }
-
+        
         buildingMarkers.push(marker);
       });
 
       layers.buildings = L.layerGroup(buildingMarkers);
       map.addLayer(layers.buildings);
       updateControl();
-    
     
     const drpdownlinks = document.querySelectorAll('.dropdown a');
     
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Error loading buildings:', error));
  
-/*Stops*/
+  /*Stops*/
   fetch('stops.json')
     .then(response => response.json())
     .then(data => {
@@ -190,20 +191,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const marker = L.marker([item.lat, item.lng], { icon })
           .bindPopup(popupContent);
-
+        marker.on('mouseover', function (e) {
+            this.openPopup();
+        });
         stopMarkers.push(marker);
 
       });
 
       layers.stops = L.layerGroup(stopMarkers);
       map.addLayer(layers.stops);
-
-      updateControl();
+      updateControl();   
   });
+ 
+  
 });
 /*layer control*/
 function updateControl() {
   if (Object.keys(layers).length < 2) return;
-
   L.control.layers({}, layers).addTo(map);
 }
+
+//zoom stops change
+map.on('zoomend', function() {
+  const currentZoom = map.getZoom();
+  const zoomThreshold = 17; 
+  var groupedIcon;
+  
+  if (currentZoom < zoomThreshold) {
+    layers.stops.eachLayer(function(marker) {
+      marker.remove();
+    }); 
+    groupedIcon = L.marker([37.94780,23.64257]).addTo(map); //den m to emfanizei me eikonidio
+  } else {
+     layers.stops.eachLayer(function(marker) {
+      marker.addTo(map);
+    });
+    groupedIcon.remove(); //em den fevgei omws
+  }
+});
