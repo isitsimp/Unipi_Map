@@ -41,20 +41,6 @@ a {
     z-index: 1000;
 }
 
-/* ===== Language Swap ===== */
-#lang {
-    position: absolute;
-    bottom: 25px;
-    right: 11px;
-    z-index: 1000;
-    padding: 8px 10px;
-    background-color: #232D53;
-    color: white;
-    border: none;
-    font-family: "Libel";
-    font-size: 20px;
-    border-radius: 25px;
-}
 
 /* ===== Dropdown Wrapper ===== */
 .dropdown-wrapper {
