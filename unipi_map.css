@@ -1,4 +1,37 @@
-#menu{
+/* ===== Reset & Base ===== */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+a:hover { opacity: 0.7; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Custom Font*/
+@font-face {
+    font-family: Libel;
+    src: url('/fonts/Libel Suit Suit Rg.otf');
+}
+
+/* ===== Map ===== */
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ===== Logo Menu ===== */
+#menu {
     position: absolute;
     width: 100%;
     top: 0;
@@ -7,25 +40,8 @@
     height: 106px;
     z-index: 1000;
 }
-/*Custom font*/
-@font-face{ 
-    font-family: Libel;
-    src: url('/fonts/Libel Suit Suit Rg.otf');
-}
 
-a:hover { opacity:0.7; }
-a { text-decoration: none;
-color: inherit;}
-
-body {
-    padding: 0;
-    margin: 0;
-}
-html, body, #map {
-    height: 100%;
-    width: 100vw;
-}
-/*language Swap*/
+/* ===== Language Swap ===== */
 #lang {
     position: absolute;
     bottom: 25px;
@@ -39,24 +55,151 @@ html, body, #map {
     font-size: 20px;
     border-radius: 25px;
 }
-/*catalogue*/
-.dropdown{
+
+/* ===== Dropdown Wrapper ===== */
+.dropdown-wrapper {
     position: absolute;
-    top: 115px;
-    left: 15px;
+    top: 95px;
+    left: 1px;
+    width: 100%;
+    max-width: 363px;
+    padding: 0 16px;
     z-index: 1000;
-    font-family: "Libel";
-    font-size: 20px;
-    color: white;
-    background-color: #232D53;
-    width: 200px;
-    padding: 10px;
+    font-family: "Libel", sans-serif;
 }
 
-video{
+/* ===== Dropdown (details element) ===== */
+.dropdown {
+    position: relative;
+}
+
+/* ===== Glass Card ===== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
+}
+
+.premium-shadow {
+    box-shadow: 0 10px 30px -10px rgba(13, 24, 61, 0.15);
+}
+
+/* ===== Summary (closed state) ===== */
+.dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    border-radius: 0.75rem;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #232D53;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown summary:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== Summary (open state) ===== */
+.dropdown[open] summary {
+    background-color: rgba(153, 29, 46, 0.8);
+    color: #fff;
+}
+
+/* ===== Arrow icon ===== */
+.dropdown .arrow {
+    transition: transform 0.2s ease;
+    color: #232D53;
+}
+
+.dropdown[open] .arrow {
+    transform: rotate(180deg);
+    color: #fff;
+}
+
+/* ===== Dropdown list ===== */
+.dropdown ul {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 8px;
     position: absolute;
-    top: 70%;
-    left: 50%;
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 60vh;
+    z-index: 20;
+    background: #232D53;
+    color: #fff;
+    box-shadow: 0 10px 30px -10px rgba(13, 24, 61, 0.15);
+    animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: top;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== List items ===== */
+.dropdown li {
+    position: relative;
+    z-index: 10;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== Material Icons ===== */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* ===== Spotlight glow ===== */
+.dropdown-glow {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    left: var(--menu-mouse-x, 50%);
+    top: var(--menu-mouse-y, 50%);
+    filter: blur(60px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    will-change: left, top;
+}
+
+.dropdown[open] .dropdown-glow {
+    opacity: 1;
 }
