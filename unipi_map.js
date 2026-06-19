@@ -82,10 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         let popupContent = building;
 
-        /*if(item.id === "01"){
-          popupContent += `<video max-width="400" height="200" autoplay loop muted>
+        if(item.id === "01"){ //KEKT
+          popupContent += `<video max-width="400" height="170" autoplay loop muted>
           <source src="/google_earth/unipiorbit.mp4" type="video/mp4">Unipi Orbit</video>`;
-        }else*/
+        }else if(item.id === "08"){ //Themistokleio
+          popupContent += `<video max-width="400" height="170" autoplay loop muted>
+          <source src="/google_earth/unipi_nikea.mp4" type="video/mp4">Unipi Orbit</video>`;
+        }else
         if (item.image) {
           popupContent += `<img src='${item.image}' style='width:100%; height:auto;'><br>`;
         }
