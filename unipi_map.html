@@ -13,6 +13,10 @@
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <!-- Material Symbols -->
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+        <style> /*Transparent popup*/
+            .leaflet-popup-content-wrapper {background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(4px);}
+            .leaflet-popup-tip {background-color: rgba(255, 255, 255, 0.6);}
+        </style>
     </head>
     <body>
         <!-- Logo -->
@@ -39,17 +43,18 @@
                 </summary>
                 <ul id="dropdown-list">
                     <div class="dropdown-glow" id="menu-glow"></div>
-                    <li data-id="01"><a href="#" data-id="01"><span class="material-symbols-outlined">apartment</span><span>Κεντρικό Κτήριο</span></a></li>
-                    <li data-id="02"><a href="#" data-id="02"><span class="material-symbols-outlined">corporate_fare</span><span>Εργαστήρια και Γραφεία Καθηγητών</span></a></li>
-                    <li data-id="03"><a href="#" data-id="03"><span class="material-symbols-outlined">restaurant</span><span>Φοιτητικό Εστιατόριο</span></a></li>
-                    <li data-id="04"><a href="#" data-id="04"><span class="material-symbols-outlined">domain</span><span>Κτήριο Γρ. Λαμπράκη</span></a></li>
-                    <li data-id="05"><a href="#" data-id="05"><span class="material-symbols-outlined">science</span><span>Εργαστήρια</span></a></li>
-                    <li data-id="06"><a href="#" data-id="06"><span class="material-symbols-outlined">work</span><span>Γραφεία καθηγητών</span></a></li>
-                    <li data-id="07"><a href="#" data-id="07"><span class="material-symbols-outlined">desk</span><span>Γραμματεία του Τμήματος</span></a></li>
-                    <li data-id="08"><a href="#" data-id="08"><span class="material-symbols-outlined">account_balance</span><span>Θεμιστόκλειο συγκρότημα Νίκαιας</span></a></li>
+                    <li><a href="#" data-id="01"><span class="material-symbols-outlined">apartment</span><span>Κεντρικό Κτήριο</span></a></li>
+                    <li><a href="#" data-id="02"><span class="material-symbols-outlined">corporate_fare</span><span>Εργαστήρια και Γραφεία Καθηγητών</span></a></li>
+                    <li><a href="#" data-id="03"><span class="material-symbols-outlined">restaurant</span><span>Φοιτητικό Εστιατόριο</span></a></li>
+                    <li><a href="#" data-id="04"><span class="material-symbols-outlined">domain</span><span>Κτήριο Γρ. Λαμπράκη</span></a></li>
+                    <li><a href="#" data-id="05"><span class="material-symbols-outlined">science</span><span>Εργαστήρια</span></a></li>
+                    <li><a href="#" data-id="06"><span class="material-symbols-outlined">work</span><span>Γραφεία καθηγητών</span></a></li>
+                    <li><a href="#" data-id="07"><span class="material-symbols-outlined">desk</span><span>Γραμματεία του Τμήματος</span></a></li>
+                    <li><a href="#" data-id="08"><span class="material-symbols-outlined">account_balance</span><span>Θεμιστόκλειο συγκρότημα Νίκαιας</span></a></li>
                 </ul>
             </details>
         </div>
+        <!--Dropdown script-->
         <script>
             (function () {
                 const container = document.getElementById('dropdown-container');
@@ -63,12 +68,10 @@
                     dropdownList.style.setProperty('--menu-mouse-x', `${e.clientX - rect.left}px`);
                     dropdownList.style.setProperty('--menu-mouse-y', `${e.clientY - rect.top}px`);
                 }, { passive: true });
-
-                // Close on outside click
+                
                 document.addEventListener('click', (e) => {
                     if (!details.contains(e.target)) details.removeAttribute('open');
                 });
-
                 // Close on item selection + map navigation
                 dropdownList.querySelectorAll('li a').forEach(item => {
                     item.addEventListener('click', (e) => {
