@@ -4,10 +4,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+/*zoom control (bottom left)*/
 map.zoomControl.remove();
 L.control.zoom({
     position: 'bottomleft'
 }).addTo(map);
+
 /*custom icons*/
 const icons = {
   bus: L.icon({
@@ -44,7 +46,7 @@ const icons = {
   }),
   groupedstopsIcon: L.icon({
     iconUrl: 'images/busgroup.png',
-    iconSize: [40, 40]
+    iconSize: [50, 50]
   })
 };
 
@@ -53,6 +55,9 @@ let buildingMarkers = [];
 let stopMarkers = [];
 
 let layers = {};
+
+//for the clustered stop pins that change icon 
+let groupedStopMarker = null;
 
 let flag = "Greek"; // Default
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,51 +98,32 @@ document.addEventListener('DOMContentLoaded', () => {
           popupContent += `<img src='${item.image}' style='width:100%; height:auto;'><br>`;
         }
 
-        let information;
-        if (flag === "Greek") {
-          information = `${item.info}<br>`;
-        } else { //English fields
-          information = `${item.info_en}<br>`;
+        let information;//information about the buildings
+        if (item.info) { 
+          if (flag === "Greek") {
+            information = `${item.info}<br>`;
+          } else { //English fields
+            information = `${item.info_en}<br>`;
+          }
+          popupContent += information;
         }
-        popupContent += information;
-       
+        
         if (item.amea === true) {
-          popupContent += `<img src='/images/wheelchair.png' alt="Προσβάσιμο για αναπηρικές καρέκλες" style='width:27px; height:27px; position:relative; bottom:-5px;'><br>`;
-        } else { //English fields
-          popupContent += `<img src='/images/no-wheelchair.png' alt="Μη-προσβάσιμο για αναπηρικές καρέκλες" style='width:27px; height:27px; position:relative; bottom:-5px;'><br>`;
+          popupContent += `<img src='/images/wheelchair.png' alt="Προσβάσιμο για αναπηρικές καρέκλες" style='width:30px; height:30px; position:relative; bottom:-5px;'>`;
+        } else { //not-accesible icon
+          popupContent += `<img src='/images/no-wheelchair.png' alt="Μη-προσβάσιμο για αναπηρικές καρέκλες" style='width:30px; height:30px; position:relative; bottom:-5px;'>`;
         }
-
-        popupContent += `<a href="${item.googlemaps}" target="_blank">Google Maps</a><img src='/images/magnifying-glass-location-solid.png' alt="Googlemaps" style='width:27px; height:27px; position:relative; bottom:-5px;'> | <a href="${item.streetview}" target="_blank">StreetView</a><img src='/images/streetview-yellow.png' alt="Streetview" style='width:27px; height:27px; position:relative; bottom:-5px;'>`;
+        //links and icons for googlemaps
+        popupContent += `<span style="position:absolute; right:20px;"><a href="${item.googlemaps}" target="_blank">Google Maps</a><img src='/images/magnifying-glass-location-solid.png' alt="Googlemaps" style='width:27px; height:27px; position:relative; bottom:-5px;'> | <a href="${item.streetview}" target="_blank">StreetView</a><img src='/images/streetview-yellow.png' alt="Streetview" style='width:27px; height:27px; position:relative; bottom:-5px;'></span>`;
         
         let marker = L.marker([item.lat, item.lng], { icon })
           .bindPopup(popupContent);
         
-        marker.on('mouseover', function (e) {
+        marker.on('mouseover', function (e) {//open the popup when hovering
             this.openPopup();
         });
         item.marker = marker;
         markerLookup[id] = marker;
-        
-        /*video*/
-        const video = document.querySelector("video");
-        const mapContainer = document.querySelector(".leaflet-map-pane");
-        if (id === "01") { //unipi main building
-          /*
-          marker.on('mouseover', function (e) {//show vid
-            video.style.visibility = 'visible';
-          });
-          marker.on('mouseout', function (e) {//hide vid
-            video.style.visibility = 'hidden';
-          });
-          mapContainer.addEventListener('mousemove', function (e) {
-            if (video.style.visibility === 'visible') {
-              const offsetX = 0; 
-              const offsetY = 200;
-              video.style.left = (e.clientX + offsetX) + 'px';
-              video.style.top = (e.clientY + offsetY) + 'px';
-            }
-          });*/
-        }
         
         buildingMarkers.push(marker);
       });
@@ -148,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const drpdownlinks = document.querySelectorAll('.dropdown a');
     
+    /*link the dropdown catalogue to pin*/
     drpdownlinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault(); ///TRY_OUT
@@ -197,38 +184,49 @@ document.addEventListener('DOMContentLoaded', () => {
         marker.on('mouseover', function (e) {
             this.openPopup();
         });
+        //tag the marker with its source id so zoomed can filter by it
+        marker.itemId = item.id;
+
         stopMarkers.push(marker);
 
       });
 
       layers.stops = L.layerGroup(stopMarkers);
       map.addLayer(layers.stops);
-      updateControl();   
-  });
- 
+      updateControl();
+    
+      /*zoom levels changes stops*/
+      map.on('zoomend', function() {
+        const currentZoom = map.getZoom();
+        const zoomThreshold = 17;
+
+        if (currentZoom < zoomThreshold) {
+          layers.stops.eachLayer(function(marker) {
+            if (marker.itemId >= "03" && marker.itemId <= "06") { //hide the clustered stops
+              marker.remove();
+            }
+          });
+          
+          if (!groupedStopMarker) { //replace with grouped icon
+            groupedStopMarker = L.marker([37.94830, 23.64257], { icon: icons.groupedstopsIcon }).addTo(map);
+          }
+        } else {
+          layers.stops.eachLayer(function(marker) {
+            marker.addTo(map);
+          });
+
+          if (groupedStopMarker) {
+            map.removeLayer(groupedStopMarker);
+            groupedStopMarker = null;
+          }
+        }
+      });
+    })
+    .catch(error => console.error('Error loading stops:', error));
   
 });
-/*layer control*/
+/*layer control (top right)*/
 function updateControl() {
   if (Object.keys(layers).length < 2) return;
   L.control.layers({}, layers).addTo(map);
 }
-
-//zoom stops change
-map.on('zoomend', function() {
-  const currentZoom = map.getZoom();
-  const zoomThreshold = 17; 
-  var groupedIcon;
-  
-  if (currentZoom < zoomThreshold) {
-    layers.stops.eachLayer(function(marker) {
-      marker.remove();
-    }); 
-    groupedIcon = L.marker([37.94780,23.64257]).addTo(map); //den m to emfanizei me eikonidio
-  } else {
-     layers.stops.eachLayer(function(marker) {
-      marker.addTo(map);
-    });
-    groupedIcon.remove(); //em den fevgei omws
-  }
-});
