@@ -168,7 +168,6 @@ a {
     color: #fff;
 }
 
-/* ===== Spotlight glow ===== */
 .dropdown-glow {
     position: absolute;
     width: 800px;
@@ -185,7 +184,6 @@ a {
     transition: opacity 0.3s ease;
     will-change: left, top;
 }
-
 .dropdown[open] .dropdown-glow {
     opacity: 1;
 }
