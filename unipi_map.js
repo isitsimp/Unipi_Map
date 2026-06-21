@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <source src="/google_earth/unipi_nikea.mp4" type="video/mp4">Unipi Orbit</video>`;
         }else
         if (item.image) {
-          popupContent += `<img src='${item.image}' style='width:100%; height:auto;'><br>`;
+          popupContent += `<img src='${item.image}' style='width:100%; height:100%;'><br>`;
         }
 
         let information;//information about the buildings

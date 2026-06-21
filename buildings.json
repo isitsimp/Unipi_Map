@@ -34,7 +34,7 @@
     "title": "Φοιτητικό Εστιατόριο",
     "street": "Τσαμαδού 78",
     "image": "/buildingsPNGS/tsamadu.png",
-    "info": "Πρωινό: 08:00-09:00 Μεσημεριανό: 12:30-17:00 Βραδινό: 17:00-19:00",
+    "info": "Πρωινό: 08:00-09:00<br>Μεσημεριανό: 12:30-17:00<br>Βραδινό: 17:00-19:00",
     "amea": false,
     "icon":"lesxh",
     "googlemaps": "https://www.google.com/maps/place/Student+Restaurant+University+of+Piraeus/@37.9413149,23.6522012,21z/data=!4m6!3m5!1s0x14a1bb26d80effef:0xf0860a3b96084a15!8m2!3d37.941281!4d23.6523352!16s%2Fg%2F11h8j43xy7",
@@ -47,7 +47,7 @@
     "title": "Κτήριο Γρ. Λαμπράκη ΓΛ",
     "street": "Γρ. Λαμπράκη 21 & Διστόμου",
     "image": "/buildingsPNGS/lampraki21.png",
-    "info": "",
+    "info": "Στο κτίριο στεγάζονται γραφεία καθηγητών<br>του Τμήματος Ναυτιλιακών<br>Σπουδών, καθώς και αίθουσες<br>διδασκαλίας.​",
     "amea": false,
     "googlemaps": "https://www.google.com/maps/place/Πανεπιστήμιο+Πειραιώς+-+κτήριο+Γρ.Λαμπράκη/@37.9460119,23.6547376,20.1z/data=!4m6!3m5!1s0x14a1bbef4985ac51:0xe0cea48f79791a52!8m2!3d37.9461909!4d23.6547744",
     "streetview": "https://www.google.com/maps/dir//Πανεπιστήμιο+Πειραιώς+-+κτήριο+Γρ.Λαμπράκη,+Distomou+43,+Pireas+185+33/@37.9460119,23.6547376,20.1z/data=!4m17!1m7"
@@ -71,7 +71,7 @@
     "title": "Γραφεία Καθηγητών",
     "street": "Γρ. Λαμπράκη 126",
     "image": "/buildingsPNGS/lampraki126.png",
-    "info": "",
+    "info": "Στο κτίριο στεγάζονται γραφεία καθηγητών <br>όλων των Τμημάτων.",
     "amea": false,
     "googlemaps": "https://www.google.com/maps/place/Grigoriou+Lampraki+126,+Pireas+185+32/@37.9418067,23.6478331,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbef33a174cb:0xa2ed6812ed7c97b7!8m2!3d37.9418067!4d23.6504134",
     "streetview": "https://www.google.com/maps/dir//Grigoriou+Lampraki+126,+Pireas+185+32/@37.9418067,23.6478331,17z/data=!4m18!1m8"
@@ -83,7 +83,7 @@
     "title": "Γραμματεία Ψηφιακών Συστημάτων",
     "street": "Ζέας 80-82",
     "image": "/buildingsPNGS/zeas.png",
-    "info": "2ος όροφος κάθε Δευτέρα-Τετάρτη-Παρασκευή 11:30–14:00 | e-mail: gramds@unipi.gr",
+    "info": "2ος όροφος<br>Κάθε Δευτέρα-Τετάρτη-Παρασκευή 11:30–14:00<br  >e-mail: gramds@unipi.gr",
     "amea": true,
     "googlemaps": "https://www.google.com/maps/place/Zeas+80-82,+Pireas+185+34/@37.9410279,23.6496008,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbef132ffb03:0xd9c056f7ae04bcd7!8m2!3d37.9410279!4d23.6521811",
     "streetview": "https://www.google.com/maps/dir//Zeas+80-82,+Pireas+185+34/@37.9410279,23.6496008,17z/data=!4m18!1m8"
