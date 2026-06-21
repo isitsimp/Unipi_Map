@@ -8,8 +8,8 @@
     "info": "Σταθμός Μετρό: Γραμμή 3",
     "info_en": "Metro Station: Line 3",
     "icon": "metroB",
-    "googlemaps": "https://www.google.com/maps/place/Dimotiko+Theatro/@37.9429352,23.6465006,18z/data=!4m6!3m5!1s0x14a1bbe8fead288b:0xd5c618fd6a0c0628!8m2!3d37.9429353!4d23.647582",
-    "streetview": "https://www.google.com/maps/dir//Dimotiko+Theatro,+Pireas+185+32/@37.9429352,23.6465006,18z/data=!4m17!1m7"
+    "googlemaps": "https://www.google.com/maps/place/Dimotiko+Theatro/@37.9429352,23.6465006,348m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbe8fead288b:0xd5c618fd6a0c0628!8m2!3d37.9429353!4d23.647582!16s%2Fm%2F0n543nr?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview": "https://www.google.com/maps/place/Dimotiko+Theatro/@37.9429353,23.647582,3a,75y,349.29h,36.15t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDejv_jew!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FABJJf50mNlGm2Is7YFFb_jnl7FRsrZr7n1iT0v9KOUo7D4zkipnr1RBEQ6y1R_Mw1xAPDzR_cmPsHZuf2qEdz7l_CWsEo3PkGilcJcDG3YmWhDcvL5duh9mTJogqNd_lDexPqUOiTpDM%3Dw900-h600-k-no-pi53.84829291936377-ya349.2895330628298-ro0-fo100!7i10000!8i5000!4m6!3m5!1s0x14a1bbe8fead288b:0xd5c618fd6a0c0628!8m2!3d37.9429353!4d23.647582!16s%2Fm%2F0n543nr?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94154,
@@ -33,7 +33,7 @@
     "info_en":"Metro Station: Line 1 (Ilektrikos)",
     "icon": "metroG",
     "googlemaps": "https://www.google.com/maps/place/%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82/@37.9481116,23.642209,434m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbc1ea7fb77f:0xe404ed42d8f92482!8m2!3d37.9481116!4d23.6432721!16s%2Fg%2F1tcx3_tn?entry=ttu&g_ep=EgoyMDI2MDQyOC4wIKXMDSoASAFQAw%3D%3D",
-    "streetview": "https://www.google.com/maps/dir//Piraeus,+Pireas+185+45/@37.9470118,23.6457033,16.28z/data=!4m17!1m7"
+    "streetview": "https://www.google.com/maps/place/%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82/@37.9481413,23.6423345,3a,75y,104.68h,101.32t/data=!3m7!1e1!3m5!1sDpWbhCLSDkxNqEiaUwXXkA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-11.31816217630589%26panoid%3DDpWbhCLSDkxNqEiaUwXXkA%26yaw%3D104.68430925346276!7i16384!8i8192!4m14!1m7!3m6!1s0x14a1bbc1ea7fb77f:0xe404ed42d8f92482!2zzqDOtc65z4HOsc65zqzPgg!8m2!3d37.9481116!4d23.6432721!16s%2Fg%2F1tcx3_tn!3m5!1s0x14a1bbc1ea7fb77f:0xe404ed42d8f92482!8m2!3d37.9481116!4d23.6432721!16s%2Fg%2F1tcx3_tn?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94780,
@@ -56,8 +56,8 @@
     "info": "Σταθμός Προαστιακού",
     "info_en": "Train Station",
     "icon": "proastiakos",
-    "googlemaps": "https://www.google.com/maps/place/Πειραιάς/@37.9491116,23.6423798,20z/data=!4m6!3m5!1s0x14a1bbc1cad3d423:0x78fede80fd331092!8m2!3d37.9491115!4d23.6425196",
-    "streetview": "https://www.google.com/maps/dir//Πειραιάς,+Pireas+185+45/@37.9491116,23.6423798,20z/data=!4m17!1m7",
+    "googlemaps": "https://www.google.com/maps/place/%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82/@37.9491116,23.6423798,87m/data=!3m1!1e3!4m15!1m8!3m7!1s0x14a1bbebb7ac3147:0xd820da95ff30fdf7!2zzqDOtc65z4HOsc65zqzPgg!3b1!8m2!3d37.9429857!4d23.6469832!16zL20vMHA3YzM!3m5!1s0x14a1bbc1cad3d423:0x78fede80fd331092!8m2!3d37.9491115!4d23.6425196!16s%2Fm%2F0268vj6?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview": "https://www.google.com/maps/place/%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82/@37.9491269,23.6423883,3a,90y,101.82h,87.49t/data=!3m7!1e1!3m5!1s_nVC5tHlQRiMLjRbGhu0cg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.5121250410558105%26panoid%3D_nVC5tHlQRiMLjRbGhu0cg%26yaw%3D101.82164748301422!7i16384!8i8192!4m15!1m8!3m7!1s0x14a1bbebb7ac3147:0xd820da95ff30fdf7!2zzqDOtc65z4HOsc65zqzPgg!3b1!8m2!3d37.9429857!4d23.6469832!16zL20vMHA3YzM!3m5!1s0x14a1bbc1cad3d423:0x78fede80fd331092!8m2!3d37.9491115!4d23.6425196!16s%2Fm%2F0268vj6?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
     "arrivals": "https://ose.mpass.ltd/#/routesInfos/2?lang=el"
   },
   {
@@ -81,8 +81,8 @@
     "info": "Στάση Λεωφορείου: 040, 049, 130, 217, 218, 229, 500, 915, Α1, Β1, Ε90, Χ96",
     "info_en": "Bus Station: 040, 049, 130, 217, 218, 229, 500, 915, Α1, Β1, Ε90, Χ96",
     "icon": "bus",
-    "googlemaps": "https://www.google.com/maps/place/Benizelou/@37.9422925,23.6515569,17.76z/data=!4m6!3m5!1s0x14a1bbeeebe6a0ab:0x1c3ea53977ff907c!8m2!3d37.9426755!4d23.6515277",
-    "streetview": "https://www.google.com/maps/dir//Benizelou,+Pireas+185+34/@37.9422925,23.6515569,17.76z/data=!4m17!1m7"
+    "googlemaps": "https://www.google.com/maps/place/%CE%92%CE%B5%CE%BD%CE%B9%CE%B6%CE%B5%CE%BB%CE%BF%CF%85/@37.9422925,23.6515569,696m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbeeebe6a0ab:0x1c3ea53977ff907c!8m2!3d37.9426755!4d23.6515277!16s%2Fg%2F1xb0n4hp?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview": "https://www.google.com/maps/place/%CE%92%CE%B5%CE%BD%CE%B9%CE%B6%CE%B5%CE%BB%CE%BF%CF%85/@37.9427118,23.6514534,3a,75y,60.89h,88.59t/data=!3m7!1e1!3m5!1stcnSfLvtW2jNZm47pJue-w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D1.4064607197869066%26panoid%3DtcnSfLvtW2jNZm47pJue-w%26yaw%3D60.89338768601144!7i16384!8i8192!4m6!3m5!1s0x14a1bbeeebe6a0ab:0x1c3ea53977ff907c!8m2!3d37.9426755!4d23.6515277!16s%2Fg%2F1xb0n4hp?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94486,
@@ -130,7 +130,7 @@
     "info_en":"Bus Station: 750",
     "icon": "bus",
     "googlemaps": "https://www.google.com/maps/place/%CE%9D%CE%B9%CE%BA%CE%B1%CE%B9%CE%B1/@37.970584,23.6352902,17.1z/data=!4m6!3m5!1s0x14a1bba6073e9abf:0xfad7bc0d9503a541!8m2!3d37.9703231!4d23.6350067!16s%2Fg%2F11j38k4xc0?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D",
-    "streetview": "https://www.google.com/maps/@37.9703433,23.6350635,3a,75y,55.44h,87.33t/data=!3m7!1e1!3m5!1s6cN-54qDR5EQmcI7o4n3YQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D2.6718263669395554%26panoid%3D6cN-54qDR5EQmcI7o4n3YQ%26yaw%3D55.444034425600655!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D"
+    "streetview": "https://www.google.com/maps/place/%CE%9D%CE%B9%CE%BA%CE%B1%CE%B9%CE%B1/@37.9703424,23.6350637,3a,75y,253.6h,90t/data=!3m7!1e1!3m5!1s6cN-54qDR5EQmcI7o4n3YQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3D6cN-54qDR5EQmcI7o4n3YQ%26yaw%3D253.60373!7i16384!8i8192!4m14!1m7!3m6!1s0x14a1bba6073e9abf:0xfad7bc0d9503a541!2zzp3Ouc66zrHOuc6x!8m2!3d37.9703231!4d23.6350067!16s%2Fg%2F11j38k4xc0!3m5!1s0x14a1bba6073e9abf:0xfad7bc0d9503a541!8m2!3d37.9703231!4d23.6350067!16s%2Fg%2F11j38k4xc0?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94072,

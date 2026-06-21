@@ -25,7 +25,7 @@
     "info": "",
     "amea": false,
     "googlemaps": "https://www.google.com/maps/place/Κέντρο+Μάθησης/@37.9413149,23.6522012,21z/data=!4m6!3m5!1s0x14a1bb0047b64d3f:0x8f2951214ddb7f7b!8m2!3d37.9412551!4d23.6523572!16s%2Fg%2F11lp34ssss",
-    "streetview": "https://www.google.com/maps/dir//37.9413482,23.6521982/@37.9413149,23.6522012,21z/data=!4m2!4m1!3e3"
+    "streetview": "https://www.google.com/maps/@37.941353,23.6520406,3a,75y,118.73h,94.38t/data=!3m7!1e1!3m5!1s7TDGA-CJDXrsEyXPzgb8eA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-4.3767740935953725%26panoid%3D7TDGA-CJDXrsEyXPzgb8eA%26yaw%3D118.72954188769424!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94125,
@@ -38,7 +38,7 @@
     "amea": false,
     "icon":"lesxh",
     "googlemaps": "https://www.google.com/maps/place/Student+Restaurant+University+of+Piraeus/@37.9413149,23.6522012,21z/data=!4m6!3m5!1s0x14a1bb26d80effef:0xf0860a3b96084a15!8m2!3d37.941281!4d23.6523352!16s%2Fg%2F11h8j43xy7",
-    "streetview": "https://www.google.com/maps/dir//Student+Restaurant+University+of+Piraeus,+Tsamadou+78,+Pireas+185+34/@37.9413149,23.6522012,21z/data=!4m17!1m7!3m6!1s0x14a1bb26d80effef:0xf0860a3b96084a15"
+    "streetview": "https://www.google.com/maps/@37.941371,23.6523646,3a,75y,214.01h,93.45t/data=!3m7!1e1!3m5!1s8YN6FjTj1uKEHVsgFXz3Tg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-3.454670232095907%26panoid%3D8YN6FjTj1uKEHVsgFXz3Tg%26yaw%3D214.01133826490656!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94619,
@@ -49,8 +49,8 @@
     "image": "/buildingsPNGS/lampraki21.png",
     "info": "Στο κτίριο στεγάζονται γραφεία καθηγητών<br>του Τμήματος Ναυτιλιακών<br>Σπουδών, καθώς και αίθουσες<br>διδασκαλίας.​",
     "amea": false,
-    "googlemaps": "https://www.google.com/maps/place/Πανεπιστήμιο+Πειραιώς+-+κτήριο+Γρ.Λαμπράκη/@37.9460119,23.6547376,20.1z/data=!4m6!3m5!1s0x14a1bbef4985ac51:0xe0cea48f79791a52!8m2!3d37.9461909!4d23.6547744",
-    "streetview": "https://www.google.com/maps/dir//Πανεπιστήμιο+Πειραιώς+-+κτήριο+Γρ.Λαμπράκη,+Distomou+43,+Pireas+185+33/@37.9460119,23.6547376,20.1z/data=!4m17!1m7"
+    "googlemaps": "https://www.google.com/maps/place/%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF+%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CF%8E%CF%82+-+%CE%BA%CF%84%CE%AE%CF%81%CE%B9%CE%BF+%CE%93%CF%81.%CE%9B%CE%B1%CE%BC%CF%80%CF%81%CE%AC%CE%BA%CE%B7/@37.9461187,23.6546343,87m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbef4985ac51:0xe0cea48f79791a52!8m2!3d37.9461909!4d23.6547744!16s%2Fg%2F11gy5417hg?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview": "https://www.google.com/maps/place/%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF+%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CF%8E%CF%82+-+%CE%BA%CF%84%CE%AE%CF%81%CE%B9%CE%BF+%CE%93%CF%81.%CE%9B%CE%B1%CE%BC%CF%80%CF%81%CE%AC%CE%BA%CE%B7/@37.9461495,23.6547082,3a,75y,63.88h,96.21t/data=!3m7!1e1!3m5!1srFV39_esFmux83jgYYSofg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-6.212747870117255%26panoid%3DrFV39_esFmux83jgYYSofg%26yaw%3D63.87635127239736!7i16384!8i8192!4m6!3m5!1s0x14a1bbef4985ac51:0xe0cea48f79791a52!8m2!3d37.9461909!4d23.6547744!16s%2Fg%2F11gy5417hg?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94168,
@@ -61,8 +61,8 @@
     "image": "/buildingsPNGS/androutsou.png",
     "info": "",
     "amea": false,
-    "googlemaps": "https://www.google.com/maps/place/Πανεπιστήμιο+Πειραιώς,+Κτήριο+Ανδρούτσου/@37.9417181,23.6472289,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbe324184151:0x14c08364671ce62!8m2!3d37.9417181!4d23.6498092",
-    "streetview": "https://www.google.com/maps/dir//Πανεπιστήμιο+Πειραιώς,+Κτήριο+Ανδρούτσου,+Odissea+Androutsou+150,+Pireas+185+32/@37.9417181,23.6472289,17z/data=!4m17!1m7"
+    "googlemaps": "https://www.google.com/maps/place/%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF+%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CF%8E%CF%82,+%CE%9A%CF%84%CE%AE%CF%81%CE%B9%CE%BF+%CE%91%CE%BD%CE%B4%CF%81%CE%BF%CF%8D%CF%84%CF%83%CE%BF%CF%85/@37.9416606,23.6496538,121m/data=!3m1!1e3!4m6!3m5!1s0x14a1bbe324184151:0x14c08364671ce62!8m2!3d37.9417181!4d23.6498092!16s%2Fg%2F11flc4sc87?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview": "https://www.google.com/maps/@37.9416948,23.6499362,3a,75y,281.77h,93.47t/data=!3m7!1e1!3m5!1sV6BPRxoMP5vOrStZDB1s1g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-3.470150543922884%26panoid%3DV6BPRxoMP5vOrStZDB1s1g%26yaw%3D281.7667862777294!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94171,
@@ -74,7 +74,7 @@
     "info": "Στο κτίριο στεγάζονται γραφεία καθηγητών <br>όλων των Τμημάτων.",
     "amea": false,
     "googlemaps": "https://www.google.com/maps/place/Grigoriou+Lampraki+126,+Pireas+185+32/@37.9418067,23.6478331,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbef33a174cb:0xa2ed6812ed7c97b7!8m2!3d37.9418067!4d23.6504134",
-    "streetview": "https://www.google.com/maps/dir//Grigoriou+Lampraki+126,+Pireas+185+32/@37.9418067,23.6478331,17z/data=!4m18!1m8"
+    "streetview": "https://www.google.com/maps/@37.9417551,23.6505889,3a,75y,271.3h,97.22t/data=!3m7!1e1!3m5!1sVN6WK6R6ghOw2U0epipkHw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-7.221844499863664%26panoid%3DVN6WK6R6ghOw2U0epipkHw%26yaw%3D271.2975448355648!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.94100,
@@ -86,7 +86,7 @@
     "info": "2ος όροφος<br>Κάθε Δευτέρα-Τετάρτη-Παρασκευή 11:30–14:00<br  >e-mail: gramds@unipi.gr",
     "amea": true,
     "googlemaps": "https://www.google.com/maps/place/Zeas+80-82,+Pireas+185+34/@37.9410279,23.6496008,17z/data=!3m1!4b1!4m6!3m5!1s0x14a1bbef132ffb03:0xd9c056f7ae04bcd7!8m2!3d37.9410279!4d23.6521811",
-    "streetview": "https://www.google.com/maps/dir//Zeas+80-82,+Pireas+185+34/@37.9410279,23.6496008,17z/data=!4m18!1m8"
+    "streetview": "https://www.google.com/maps/place/%CE%96%CE%AD%CE%B1%CF%82+80-82,+%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CE%AC%CF%82+185+34/@37.941001,23.6522858,3a,90y,333.32h,95.23t/data=!3m7!1e1!3m5!1sAgwPy4yH6RKwSr8Tezyvlg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-5.228573034196515%26panoid%3DAgwPy4yH6RKwSr8Tezyvlg%26yaw%3D333.31695613491206!7i16384!8i8192!4m6!3m5!1s0x14a1bbef132ffb03:0xd9c056f7ae04bcd7!8m2!3d37.9410279!4d23.6521811!16s%2Fg%2F11zkr1dd5f?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   },
   {
     "lat": 37.97060,
@@ -97,7 +97,7 @@
     "image": "/buildingsPNGS/nikaia.png",
     "info": "Κέντρο εκπαιδευτικών και ερευνητικών δραστηριοτήτων",
     "amea": true,
-    "googlemaps": "https://www.google.com/maps/place/University+of+Piraeus+Themistoclean+Campus/@37.9704131,23.6244842,16z/data=!4m6!3m5!1s0x14a1bb4bd49c5553:0xb149a23abe5747b!8m2!3d37.9704161!4d23.6340599",
-    "streetview": "https://www.google.com/maps/dir//University+of+Piraeus+Themistoclean+Campus,+Kira+Tis+Ro+17,+Nikea+184+51/@37.9704131,23.6244842,16z/data=!4m17!1m7"
+    "googlemaps": "https://www.google.com/maps/place/%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF+%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CF%8E%CF%82+%CE%98%CE%B5%CE%BC%CE%B9%CF%83%CF%84%CF%8C%CE%BA%CE%BB%CE%B5%CE%B9%CE%BF+%CE%A3%CF%85%CE%B3%CE%BA%CF%81%CF%8C%CF%84%CE%B7%CE%BC%CE%B1/@37.9700346,23.6289144,874m/data=!3m1!1e3!4m6!3m5!1s0x14a1bb4bd49c5553:0xb149a23abe5747b!8m2!3d37.9704161!4d23.6340599!16s%2Fg%2F11p61hrvyc?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
+    "streetview": "https://www.google.com/maps/place/%CE%A0%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84%CE%AE%CE%BC%CE%B9%CE%BF+%CE%A0%CE%B5%CE%B9%CF%81%CE%B1%CE%B9%CF%8E%CF%82+%CE%98%CE%B5%CE%BC%CE%B9%CF%83%CF%84%CF%8C%CE%BA%CE%BB%CE%B5%CE%B9%CE%BF+%CE%A3%CF%85%CE%B3%CE%BA%CF%81%CF%8C%CF%84%CE%B7%CE%BC%CE%B1/@37.9706199,23.6350865,3a,75y,271.12h,99.83t/data=!3m7!1e1!3m5!1sRGjcp0xCibjma8qAhxf-Gw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-9.829722929010757%26panoid%3DRGjcp0xCibjma8qAhxf-Gw%26yaw%3D271.11523613403944!7i16384!8i8192!4m6!3m5!1s0x14a1bb4bd49c5553:0xb149a23abe5747b!8m2!3d37.9704161!4d23.6340599!16s%2Fg%2F11p61hrvyc?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
   }
 ]
