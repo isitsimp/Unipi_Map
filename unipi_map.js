@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <source src="/google_earth/unipi_nikea.mp4" type="video/mp4">Unipi Orbit</video>`;
         }else
         if (item.image) {
-          popupContent += `<img src='${item.image}' style='width:100%; height:100%;'><br>`;
+          popupContent += `<img src=/buildingsPNGS/${item.image} style='width:100%; height:100%;'><br>`;
         }
 
         let information;//information about the buildings
@@ -144,9 +144,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetMarker = markerLookup[targetID];
         
         if (targetMarker){
-          map.flyTo(targetMarker.getLatLng(), 18, {
-            duration: 1.5
-          });
+          map.flyTo({
+            lat: targetMarker.getLatLng().lat + 0.0005, //offset for centering the popup
+            lng: targetMarker.getLatLng().lng },
+            18,
+            {duration: 1.5}
+          );
           targetMarker.openPopup();
           
           const details = this.closest('details');

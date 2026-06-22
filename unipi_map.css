@@ -47,7 +47,7 @@ a {
     position: absolute;
     top: 95px;
     left: 1px;
-    width: 100%;
+    width: 267px;
     max-width: 363px;
     padding: 0 16px;
     z-index: 1000;
@@ -120,7 +120,7 @@ a {
     margin: 8px 0 0 0;
     padding: 8px;
     position: absolute;
-    width: 100%;
+    width: 92%;
     border-radius: 0.75rem;
     overflow: hidden;
     overflow-y: auto;
