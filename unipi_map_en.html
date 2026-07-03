@@ -1,35 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
     <head>
         <meta charset="UTF-8" />
         <title>Map - Department of Digital Systems</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="unipi_map.css">
         <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
-        <!--Leaflet-->
+        <!-- Leaflet -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-            crossorigin=""/>
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-        <style>
-            #map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
-        </style>   
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <!-- Material Symbols -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+        <style> /*Transparent popup*/
+            .leaflet-popup-content-wrapper {background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(4px);}
+            .leaflet-popup-tip {background-color: rgba(255, 255, 255, 0.6);}
+        </style>
     </head>
     <body>
-        <!--MENU-->
+        <!-- Logo -->
         <div id="menu">
-            <a href="https://www.ds.unipi.gr/en/home-en/" rel="home">
-                <img width="100px" height="100px" src="https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo.png" alt="Department of Digital Systems" decoding="async" srcset="https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo.png 180w, https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo-150x150.png 150w">
+            <a href="https://www.ds.unipi.gr/" target="_blank">
+                <img width="100px" height="100px"
+                    src="https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo.png"
+                    alt="Department of Digital Systems" decoding="async"
+                    srcset="https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo.png 180w,
+                            https://www.ds.unipi.gr/wp-content/uploads/2019/04/University-of-Piraeus-Logo-150x150.png 150w">
             </a>
-            <header>University of Piraeus Map</header>
-            <a href="https://www.unipi.gr/en/home/" target="_blank" id="link-to-Unipi">University of Piraeus</a>
-            <a href="https://www.ds.unipi.gr/en/home-en/" rel="home" id="link-to-DS">Department of Digital Systems</a>
         </div>
-        <!--MAP-->
+
+        <!-- Map -->
         <div id="map"></div>
         <script src="unipi_map.js"></script>
-        <a id="lang" lang="gr" hreflang="gr" href="unipi_map.html"><img src="/images/el.png" alt="Ελληνικά"></a>      
+
+        <!-- Building Directory Dropdown -->
+        <div class="dropdown-wrapper" id="dropdown-container">
+            <details class="dropdown">
+                <summary class="glass-card premium-shadow" role="button">
+                    <span>Buildings Catalogue</span>
+                    <span class="material-symbols-outlined arrow">expand_more</span>
+                </summary>
+                <ul id="dropdown-list">
+                    <li><a href="#" data-id="01"><span class="material-symbols-outlined">apartment</span><span>Main Building</span></a></li>
+                    <li><a href="#" data-id="02"><span class="material-symbols-outlined">corporate_fare</span><span>Laboratories and Professors' Offices</span></a></li>
+                    <li><a href="#" data-id="03"><span class="material-symbols-outlined">restaurant</span><span>Student Restaurant</span></a></li>
+                    <li><a href="#" data-id="04"><span class="material-symbols-outlined">domain</span><span>Gr.Lampraki Building</span></a></li>
+                    <li><a href="#" data-id="05"><span class="material-symbols-outlined">science</span><span>Laboratories</span></a></li>
+                    <li><a href="#" data-id="06"><span class="material-symbols-outlined">work</span><span>Professors' Offices</span></a></li>
+                    <li><a href="#" data-id="07"><span class="material-symbols-outlined">desk</span><span>Department Secretary</span></a></li>
+                    <li><a href="#" data-id="08"><span class="material-symbols-outlined">account_balance</span><span>Themistocleo complex of Nikea</span></a></li>
+                </ul>
+            </details>
+        </div>
+        <!--Dropdown script-->
+        <script>
+            (function () {
+                const container = document.getElementById('dropdown-container');
+                const dropdownList = document.getElementById('dropdown-list');
+                const details = container.querySelector('details.dropdown');
+
+                // Spotlight tracking
+                window.addEventListener('mousemove', (e) => {
+                    if (!details.hasAttribute('open')) return;
+                    const rect = dropdownList.getBoundingClientRect();
+                    dropdownList.style.setProperty('--menu-mouse-x', `${e.clientX - rect.left}px`);
+                    dropdownList.style.setProperty('--menu-mouse-y', `${e.clientY - rect.top}px`);
+                }, { passive: true });
+                
+                document.addEventListener('click', (e) => {
+                    if (!details.contains(e.target)) details.removeAttribute('open');
+                });
+                // Close on item selection + map navigation
+                dropdownList.querySelectorAll('li a').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        details.removeAttribute('open');
+                        if (typeof window.focusBuilding === 'function') {
+                            window.focusBuilding(item.getAttribute('data-id'));
+                        }
+                    });
+                });
+            })();
+        </script>
     </body>
 </html>
